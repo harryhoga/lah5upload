@@ -1,0 +1,40 @@
+{
+    "name": "hoga/lah5upload",
+    "description": "这是一个laravel-admin异步的阿里云oss分片上传插件,修改自https://github.com/JackSinner/h5upload",
+    "type": "library",
+    "keywords": [
+        "laravel-admin",
+        "aliyun",
+        "oss",
+        "extension"
+    ],
+    "homepage": "https://github.com/laravel-admin-ext/lah5upload",
+    "license": "MIT",
+    "version": "1.0.2",
+    "authors": [
+        {
+            "name": "Harry.hoga",
+            "email": "harry.hoga@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "alibabacloud/client": "^1.8",
+        "encore/laravel-admin": "~1.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Encore\\h5upload\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Encore\\lah5upload\\lah5uploadServiceProvider"
+            ]
+        }
+    }
+}
