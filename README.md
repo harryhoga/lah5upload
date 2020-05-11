@@ -1,9 +1,9 @@
 # H5 直传阿里云 oss 扩展
 
-### 1.使用 composer 安装 harryhoga/h5upload 扩展
+### 1.使用 composer 安装 hoga/lah5upload 扩展
 
 ```
-composer require harryhoga/lah5upload -vvvv
+composer require hoga/lah5upload -vvvv
 ```
 
 ### 2.导出资源文件

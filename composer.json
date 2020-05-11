@@ -8,7 +8,7 @@
         "oss",
         "extension"
     ],
-    "homepage": "https://github.com/laravel-admin-ext/lah5upload",
+    "homepage": "https://github.com/harryhoga/lah5upload",
     "license": "MIT",
     "version": "1.0.2",
     "authors": [
@@ -19,7 +19,7 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "alibabacloud/client": "^1.8",
+        "alibabacloud/sdk": "^1.8",
         "encore/laravel-admin": "~1.7"
     },
     "require-dev": {
@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Encore\\h5upload\\": "src/"
+            "Encore\\lah5upload\\": "src/"
         }
     },
     "extra": {
