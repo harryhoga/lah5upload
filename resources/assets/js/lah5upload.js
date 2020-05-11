@@ -24,7 +24,7 @@ function check_file() {
     return true;
 }
 
-function upload(_this) {
+function lah5upload(_this) {
     if (uploaded_flag) {
         alert('文件正在上传中');
         return false;
