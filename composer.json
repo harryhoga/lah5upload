@@ -19,7 +19,7 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "alibabacloud/sdk": "^1.8",
+        "aliyuncs/oss-sdk-php": "^2.3",
         "encore/laravel-admin": "~1.7"
     },
     "require-dev": {
