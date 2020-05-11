@@ -8,9 +8,9 @@ composer require hoga/lah5upload -vvvv
 
 ### 2.导出资源文件
 
-`windows`:`php artisan vendor:publish --provider=Encore\lah5upload\h5uploadServiceProvider`
+`windows`:`php artisan vendor:publish --provider=Encore\lah5upload\lah5uploadServiceProvider`
 
-`mac|linux`:`php artisan vendor:publish --provider=Encore\\lah5upload\\h5uploadServiceProvider`
+`mac|linux`:`php artisan vendor:publish --provider=Encore\\lah5upload\\lah5uploadServiceProvider`
 
 ### 3.在`app/Admin/bootstrap.php`添加代码
 
