@@ -38,4 +38,15 @@ class lah5uploadFiled extends Field
         $this->attribute('accept', $accept);
         return $this;
     }
+
+    /**
+     * 设置aliyun oss 的上传目录
+     * @param string $osspath  aliyun oss 的bucket下上传的根目录
+     */
+    function setOssPath(string $osspath = '')
+    {
+        print_r($osspath);
+        $this->attribute('aliosspath', $osspath);
+        return $this;
+    }
 }
