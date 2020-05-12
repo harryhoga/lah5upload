@@ -19,6 +19,16 @@ class StsRole
         $this->configOss = $config;
     }
 
+    public function accessKey()
+    {
+        return $this->configOss['access_key'];
+    }
+
+    public function accessSecret()
+    {
+        return $this->configOss['access_secret'];
+    }
+
     public function regionId()
     {
         return $this->configOss['sts_region_id'];
@@ -29,14 +39,18 @@ class StsRole
         return $this->configOss['sts_endpoint'];
     }
 
-    public function accessKey()
+    public function policy()
     {
-        return $this->configOss['access_key'];
+        return $this->configOss['policy'];
     }
 
-    public function accessSecret()
+    public function RoleSessionName()
     {
-        return $this->configOss['access_secret'];
+        return $this->configOss['RoleSessionName'];
+    }
+    public function RoleArn()
+    {
+        return $this->configOss['RoleArn'];
     }
 
     public function stsRam()
@@ -51,6 +65,11 @@ class StsRole
         $secret_key = $this->configOss['access_secret'];
         $region_id = $this->configOss['sts_region_id'];
         $endpoint = $this->configOss['sts_endpoint'];
+        $policy =  $this->configOss['policy'];
+        $RoleSessionName =  $this->configOss['RoleSessionName'];
+        $RoleArn =  $this->configOss['sts_ram'];
+
+        print_r($this->configOss);
 
 
         AlibabaCloud::accessKeyClient($access_key, $secret_key)
@@ -59,10 +78,11 @@ class StsRole
         try {
             $response = Sts::v20150401()
                 ->assumeRole()
-                ->withRoleArn('acs:ram::1975982615784844:role/ram-neone-video') //指定角色ARN
-                ->withRoleSessionName('aliyun_oss_sts_neone-video') //RoleSessionName即临时身份的会话名称，用于区分不同的临时身份
+                ->withRoleArn($RoleArn) //指定角色ARN
+                ->withRoleSessionName($RoleSessionName) //RoleSessionName即临时身份的会话名称，用于区分不同的临时身份
                 //设置权限策略以进一步限制角色的权限
-                //             ->withPolicy('{
+                ->withPolicy($policy)
+                // ->withPolicy('{
                 //   "Version": "1",
                 //   "Statement": [
                 //     {
@@ -83,6 +103,7 @@ class StsRole
             // return response()->json(['code' => 200, 'Credentials' =>  $Credentials, 'AssumedRoleUser' => $AssumedRoleUser]);
             return $response;
         } catch (Exception $e) {
+            print_r($e);
             return null;
         }
     }
