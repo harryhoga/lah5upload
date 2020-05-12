@@ -29,6 +29,12 @@ Encore\Admin\Form::extend('lah5upload', \Encore\lah5upload\lah5uploadFiled::clas
 $form->lah5upload('url','视频')->setExpansion('video');
 ```
 
+### 设置 aliyun oss bucket 内的上传路径
+
+```
+$form->lah5upload('url','视频')->setOssPath('video');
+```
+
 ### 关于.env 配置文件
 
 ```
