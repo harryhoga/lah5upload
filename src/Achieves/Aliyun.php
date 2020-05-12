@@ -51,7 +51,7 @@ class Aliyun extends ThirdPartyUploadAbs implements ThirdPartyUpload
                     'query' => [
                         'RegionId' => $this->config['sts_region_id'],
                         'RoleArn' => $this->config['sts_ram'],
-                        'RoleSessionName' => "test",
+                        'RoleSessionName' => $this->config['RoleSessionName'],
                         'DurationSeconds' => "1000",
                     ]
                 ])
