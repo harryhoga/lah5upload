@@ -7,7 +7,7 @@ use Encore\Admin\Form\Field;
 class lah5uploadFiled extends Field
 {
     public $view = 'lah5upload::index';
-
+    public $escape = false;
     function render()
     {
         //判断是否有值,有值那么就是编辑,编辑不需要强制上传
@@ -35,7 +35,7 @@ class lah5uploadFiled extends Field
                 $accept = 'image/jpeg,image/png,image/gif';
                 break;
         }
-        $this->attribute('accept', $accept);
+        $this->attribute(['accept' => $accept]);
         return $this;
     }
 
@@ -45,7 +45,7 @@ class lah5uploadFiled extends Field
      */
     function setOssPath(string $osspath = '')
     {
-        $this->attribute('aliosspath', $osspath);
+        $this->attribute(['aliosspath' => $osspath]);
         return $this;
     }
 }
