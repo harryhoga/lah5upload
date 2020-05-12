@@ -45,7 +45,6 @@ class lah5uploadFiled extends Field
      */
     function setOssPath(string $osspath = '')
     {
-        print_r($osspath);
         $this->attribute('aliosspath', $osspath);
         return $this;
     }
