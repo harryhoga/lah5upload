@@ -90,12 +90,25 @@ function get_oss_info() {
 }
 
 function generate_upload_name() {
-    let month = new Date().getMonth();
-    month++;
-    if (month < 10) {
-        month = '0' + month;
+    function generate_upload_name() {
+        let month = new Date().getMonth();
+        month++;
+        if (month < 10) {
+            month = '0' + month;
+        }
+        // return (
+        //     file_ext +
+        //     "/" +
+        //     new Date().getFullYear() +
+        //     "/" +
+        //     month +
+        //     "/" +
+        //     new Date().getTime() +
+        //     "." +
+        //     file_ext
+        // );
+        return new Date().getFullYear() + '' + month + '' + new Date().getDate() + '.' + file_ext;
     }
-    return file_ext + '/' + new Date().getFullYear() + '/' + month + '/' + new Date().getTime() + '.' + file_ext;
 }
 
 /**
