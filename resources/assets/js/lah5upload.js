@@ -46,8 +46,11 @@ function lah5upload(_this) {
         endpoint: oss_info.oss.endpoint,
         bucket: oss_info.oss.bucket,
     });
+    console.log(_this);
+    console.log($(_this));
+    var aliosspath = $(_this).attr('aliosspath');
     client
-        .multipartUpload(generate_upload_name(), file_resource, {
+        .multipartUpload(generate_upload_name(aliosspath), file_resource, {
             progress: (percentage, checkpoint, res) => {
                 if (percentage > 0) {
                     $('.schedule')
@@ -69,7 +72,8 @@ function lah5upload(_this) {
 
 function get_oss_info() {
     $.ajax({
-        url: '/admin/lah5upload_info',
+        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+        url: '/mt/lah5upload_info',
         type: 'post',
         datatype: 'json',
         async: false,
@@ -89,26 +93,24 @@ function get_oss_info() {
     return oss_info;
 }
 
-function generate_upload_name() {
-    function generate_upload_name() {
-        let month = new Date().getMonth();
-        month++;
-        if (month < 10) {
-            month = '0' + month;
-        }
-        // return (
-        //     file_ext +
-        //     "/" +
-        //     new Date().getFullYear() +
-        //     "/" +
-        //     month +
-        //     "/" +
-        //     new Date().getTime() +
-        //     "." +
-        //     file_ext
-        // );
-        return new Date().getFullYear() + '' + month + '' + new Date().getDate() + '.' + file_ext;
+function generate_upload_name(aliosspath) {
+    let month = new Date().getMonth();
+    month++;
+    if (month < 10) {
+        month = '0' + month;
     }
+    // return (
+    //     file_ext +
+    //     "/" +
+    //     new Date().getFullYear() +
+    //     "/" +
+    //     month +
+    //     "/" +
+    //     new Date().getTime() +
+    //     "." +
+    //     file_ext
+    // );
+    return aliosspath + '/' + new Date().getFullYear() + '' + month + '' + new Date().getDate() + new Date().getTime() + '.' + file_ext;
 }
 
 /**
