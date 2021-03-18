@@ -10,7 +10,6 @@ use Illuminate\Support\ServiceProvider;
 
 class lah5uploadServiceProvider extends ServiceProvider
 {
-
     /**
      * {@inheritdoc}
      */
