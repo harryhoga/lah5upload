@@ -28,13 +28,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Encore\\lah5upload\\": "src/"
+            "Hoga\\lah5upload\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Encore\\lah5upload\\lah5uploadServiceProvider"
+                "Hoga\\lah5upload\\lah5uploadServiceProvider"
             ]
         }
     }
