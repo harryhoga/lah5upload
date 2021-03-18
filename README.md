@@ -15,7 +15,8 @@ composer require hoga/lah5upload -vvvv
 ### 3.在`app/Admin/bootstrap.php`添加代码
 
 ```
-Hoga\Admin\Form::extend('lah5upload', \Hoga\lah5upload\lah5uploadFiled::class);
+Encore\Admin\Form::extend('lah5upload', \Hoga\lah5upload\lah5uploadFiled::class);
+
 ```
 
 ### 5.在 form 方法里面使用
