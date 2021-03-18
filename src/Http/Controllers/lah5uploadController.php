@@ -1,9 +1,9 @@
 <?php
 
-namespace Encore\lah5upload\Http\Controllers;
+namespace Hoga\lah5upload\Http\Controllers;
 
 use Encore\Admin\Layout\Content;
-use Encore\lah5upload\Interfaces\ThirdPartyUpload;
+use Hoga\lah5upload\Interfaces\ThirdPartyUpload;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Routing\Controller;
 

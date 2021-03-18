@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\lah5upload\Abstracts;
+namespace Hoga\lah5upload\Abstracts;
 
 abstract class ThirdPartyUploadAbs
 {

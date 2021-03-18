@@ -1,13 +1,13 @@
 <?php
 
-namespace Encore\lah5upload\Achieves;
+namespace Hoga\lah5upload\Achieves;
 
 use AlibabaCloud\{
     Client\AlibabaCloud,
     Client\Exception\ClientException,
     Client\Exception\ServerException
 };
-use Encore\lah5upload\{
+use Hoga\lah5upload\{
     Interfaces\ThirdPartyUpload,
     Abstracts\ThirdPartyUploadAbs
 };

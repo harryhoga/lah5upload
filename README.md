@@ -8,14 +8,14 @@ composer require hoga/lah5upload -vvvv
 
 ### 2.导出资源文件
 
-`windows`:`php artisan vendor:publish --provider=Encore\lah5upload\lah5uploadServiceProvider`
+`windows`:`php artisan vendor:publish --provider=Hoga\lah5upload\lah5uploadServiceProvider`
 
-`mac|linux`:`php artisan vendor:publish --provider=Encore\\lah5upload\\lah5uploadServiceProvider`
+`mac|linux`:`php artisan vendor:publish --provider=Hoga\\lah5upload\\lah5uploadServiceProvider`
 
 ### 3.在`app/Admin/bootstrap.php`添加代码
 
 ```
-Encore\Admin\Form::extend('lah5upload', \Encore\lah5upload\lah5uploadFiled::class);
+Hoga\Admin\Form::extend('lah5upload', \Hoga\lah5upload\lah5uploadFiled::class);
 ```
 
 ### 5.在 form 方法里面使用

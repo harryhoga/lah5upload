@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\lah5upload;
+namespace Hoga\lah5upload;
 
 use Encore\Admin\Form\Field;
 

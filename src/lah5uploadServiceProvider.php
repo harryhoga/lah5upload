@@ -1,10 +1,10 @@
 <?php
 
-namespace Encore\lah5upload;
+namespace Hoga\lah5upload;
 
-use Encore\lah5upload\Achieves\Aliyun;
+use Hoga\lah5upload\Achieves\Aliyun;
 use Encore\Admin\Admin;
-use Encore\lah5upload\Interfaces\ThirdPartyUpload;
+use Hoga\lah5upload\Interfaces\ThirdPartyUpload;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 

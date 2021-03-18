@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\lah5upload\Interfaces;
+namespace Hoga\lah5upload\Interfaces;
 
 /**
  * Interface ThirdPartyUpload
